@@ -1,0 +1,24 @@
+{
+	"name": "cleora",
+	"version": "1.0.0",
+	"description": "cleora is super responsive wordpress blog theme built using tailwindCSS",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev_old": "npx tailwindcss -c tailwind.config.js -i assets/css/input.css -o assets/css/cleora.css",
+		"dev": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/cleora.css --watch",
+		"prod": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/cleora.css --minify"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"autoprefixer": "^10.4.7",
+		"postcss": "^8.4.13",
+		"tailwindcss": "^3.0.24"
+	},
+	"dependencies": {}
+}
+
+
+
