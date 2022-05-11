@@ -113,24 +113,10 @@ if ( ! function_exists( 'cleora_entry_footer' ) ) :
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
-			// $categories_list = get_the_category_list();
-			// if ( $categories_list ) {
-			// 	/* translators: 1: list of categories. */
-			// 	printf( '<div class="cat-links"><span class="pr-1">Posted In</span>' . esc_html__( '%1$s', 'cleora' ) . '</div>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			// }
-
-			/* translators: used between list items, there is a space after the comma */
-			// $tags_list = get_the_tag_list();
-			// if ( $tags_list ) {
-			// 	/* translators: 1: list of tags. */
-			// 	printf( '<div class="tags-links"><span>Tagged</span>' . esc_html__( '%1$s', 'cleora' ) . '</div>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-			// }
 			$post_id = get_the_ID();
 			$categories_list = wp_get_post_categories($post_id);
 			if ( $categories_list ) {
 				echo '<div class="cats-links"><span class="inline-block text-gray-500 font-bold text-sm mr-1">Category:</span>';
-				// echo $categories_list;
-				// echo '<div class="tags-links"><span class="inline-block text-gray-500 font-bold text-sm mr-1">Category:</span>';
 				foreach($categories_list as $c) {
 					$category = get_category( $c );
 					echo '<a href="'.esc_url( get_category_link( $category->term_id ) ).'">' .$category->name .'</a>'; 

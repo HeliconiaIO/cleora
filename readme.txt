@@ -1,18 +1,18 @@
-=== Cleora Blog ===
-Contributors: Cleora
+=== Cleora blogging ===
+Contributors: Fancy Text Pro
 Tags: three-column, custom-background, custom-colors, custom-logo, custom-menu, featured-images, threaded-comments, blog, sticky-post, translation-ready
 Requires at least: 5.9
 Tested up to: 5.9
 Requires PHP: 5.6
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Cleora blog theme build in Tailwind framework. Cleora blog theme is the best blogging theme with minimal and clean theme layout for blogger. Blog listing with sidebar with good typography.
+Cleora blogging theme build in Tailwind css framework. Cleora blogging theme is the best blogging theme with minimal and clean theme layout for blogger. Blog listing with sidebar with good typography.
 Cleora is fully responvice theme, which mean user can see the blog on any device without any issue. 
-Cleora blog theme is customizable, you can change the color of the theme as per your choice and you can also configure the social icon on the header.
+Cleora blogging theme is customizable, you can change the color of the theme as per your choice and you can also configure the social icon on the header.
 
 == Installation ==
 
@@ -23,14 +23,14 @@ Cleora blog theme is customizable, you can change the color of the theme as per 
 5. Navigate to Appearance > Customize in your admin panel and customize to your taste.
 
 == Privacy ==
-Cleora blog theme uses LocalStorage to save the setting when customize the background colors.
+Cleora blogging theme uses LocalStorage to save the setting when customize the background colors.
 LocalStorage is necessary for the setting to work and is only used when a user change the customization settings.
 No data is saved in the database or transferred.
 
 == Copyright ==
 
-Cleora blog theme WordPress Theme, 2020 - 2022 heliconia.io
-Cleora blog theme is distributed under the terms of the GNU GPL.
+Cleora blogging theme WordPress Theme, 2020 - 2022 fancytextpro.com
+Cleora blogging theme is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -44,24 +44,30 @@ GNU General Public License for more details.
 
 This theme bundles the following third-party resources:
 
-Cleora blog theme is derived from Underscores, (C) 2022.
+Cleora blogging theme is derived from Underscores, (C) 2022.
 
-Cleora blog theme is also based on:
+Cleora blogging theme is also based on:
 
 Underscores https://underscores.me/, Copyright (C) 2012-2022 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-* screenshot.png © 2022 Unsplash.com,  
-	- Photo by Domenico Loia on Unsplash https://unsplash.com/photos/hGV2TfOh0ns
-	- Photo by kate.sade on Unsplash https://unsplash.com/photos/2zZp12ChxhU
-	- Photo by Josefin on Unsplash https://unsplash.com/photos/Szvrsk2DItU
-	- Photo by Dan Freeman on Unsplash https://unsplash.com/photos/WHPsxhB4mWQ
-	- Photo by Roberto Nickson on Unsplash https://unsplash.com/photos/7BjmDICVloE
-	- Photo by Shifaaz shamoon on Unsplash https://unsplash.com/photos/Rl9l9mL6Pvs
+* screenshot.png © 2019 Kaboompics.com, CC0, 
+https://kaboompics.com/photo/14021/girl-with-a-gift
+https://kaboompics.com/photo/21889/young-asian-woman-at-office
+https://kaboompics.com/photo/4903/stylish-workspace-with-macbook-pro
+https://kaboompics.com/photo/21636/paint-backgrounds-various-shades-of-purple-and-pink
+https://kaboompics.com/photo/7949/fresh-garden-rose-on-the-blue-water-of-a-swimming-pool-on-a-warm-summer-day
+https://kaboompics.com/photo/17779/backgrounds-of-coloured-drops
 
 * © 2022 Tailwind Labs Inc. https://tailwindcss.com
 
 == Changelog ==
 
 = 1.0 =
-* Released: May 03, 2022
+* Released : May 05, 2022
+
+= 1.1 =
+* Bug Fixes: May 05, 2022
+
+= 1.2 =
+* Bug Fixes: May 06, 2022

@@ -15,14 +15,15 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-6">
 				<div class="flex justify-center items-center border-t-2 border-gray-100 py-3 md:space-x-10">
 						<?php
-						wp_nav_menu( array(
-							'theme_location'    => 'footer',
-							'depth'             => 1,
-							'container'         => false,
-							'menu_class'        => 'footer-menu',
-							// 'fallback_cb'       => 'Cleora_Nav_Walker::fallback',
-							'walker'            => new Cleora_Nav_Walker(),
-						) );
+						if (has_nav_menu('footer')) {
+							wp_nav_menu( array(
+								'theme_location'    => 'footer',
+								'depth'             => 1,
+								'container'         => false,
+								'menu_class'        => 'footer-menu',
+								'walker'            => new Cleora_Nav_Walker(),
+							));
+						}
 						?>
 				</div>
 		</div>
@@ -34,7 +35,7 @@
 					printf(
 						/* translators: %s: WordPress. */
 						esc_html__( 'Made with ❤️ by developer of  %s.', 'cleora' ),
-						'<a href="' . esc_url( __( 'https://www.fancytextpro.com/', 'cleora' ) ) . '">Fancy Text Generator</a>'
+						'<a href="' . esc_url( __( 'https://www.fancytextpro.com/', 'cleora' ) ) . '">Fancy Text Pro</a>'
 					);
 				?>
 		</p>

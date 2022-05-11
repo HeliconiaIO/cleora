@@ -9,7 +9,7 @@
 
 if ( ! defined( 'CLEORA_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'CLEORA_VERSION', '1.1' );
+	define( 'CLEORA_VERSION', '1.2' );
 }
 define('CLEORA_BLOG_DIR', get_template_directory().'/');
 define('CLEORA_BLOG_URI', get_template_directory_uri().'/');
@@ -29,7 +29,7 @@ if ( ! function_exists( 'cleora_setup' ) ) :
 		 * If you're building a theme based on Cleora, use a find and replace
 		 * to change 'cleora' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'cleora', get_template_directory() . '/languages' );
+		 load_theme_textdomain( 'cleora', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -87,16 +87,8 @@ if ( ! function_exists( 'cleora_setup' ) ) :
 		add_theme_support( 'editor-styles' );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support(
-			"custom-background",
-			apply_filters(
-				'cleora_custom_background_args',
-				array(
-					'default-color' => 'fbfbfb',
-					'default-image' => '',
-				)
-			)
-		);
+		add_theme_support( 'custom-header' );
+		add_theme_support( "custom-background", apply_filters('cleora_custom_background_args', array('default-color' => 'fbfbfb','default-image' => '',)));
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -109,9 +101,7 @@ if ( ! function_exists( 'cleora_setup' ) ) :
 		$logo_width  = 150;
 		$logo_height = 40;
 
-		add_theme_support(
-			"custom-logo",
-			array(
+		add_theme_support("custom-logo", array(
 				'height'               => $logo_height,
 				'width'                => $logo_width,
 				'flex-width'           => true,
@@ -209,6 +199,14 @@ function cleora_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cleora_scripts' );
 
+
+add_filter( 'clean_url', function( $url ) {
+    if ( FALSE === strpos( $url, '.js' ) ) {
+        return $url;
+    }
+    return "$url' defer='defer";
+}, 11, 1 );
+
 /**
  * Custom template tags for this theme.
  */
@@ -225,7 +223,6 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 require get_template_directory() . '/inc/cleora-navwalker.php';
-require get_template_directory() . '/inc/class-wp-navwalker.php';
 
 
 /**
