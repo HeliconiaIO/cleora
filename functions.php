@@ -29,7 +29,7 @@ if ( ! function_exists( 'cleora_setup' ) ) :
 		 * If you're building a theme based on Cleora, use a find and replace
 		 * to change 'cleora' to the name of your theme in all the template files.
 		 */
-		 load_theme_textdomain( 'cleora', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'cleora', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -87,8 +87,16 @@ if ( ! function_exists( 'cleora_setup' ) ) :
 		add_theme_support( 'editor-styles' );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-header' );
-		add_theme_support( "custom-background", apply_filters('cleora_custom_background_args', array('default-color' => 'fbfbfb','default-image' => '',)));
+		add_theme_support(
+			"custom-background",
+			apply_filters(
+				'cleora_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -101,14 +109,15 @@ if ( ! function_exists( 'cleora_setup' ) ) :
 		$logo_width  = 150;
 		$logo_height = 40;
 
-		add_theme_support("custom-logo", array(
+		$args = array(
 				'height'               => $logo_height,
 				'width'                => $logo_width,
 				'flex-width'           => true,
 				'flex-height'          => true,
 				'unlink-homepage-logo' => true,
-			)
 		);
+
+		add_theme_support('custom-logo', $args);
 
 
 		// Add support for responsive embedded content.
@@ -191,7 +200,7 @@ function cleora_scripts() {
 	wp_enqueue_style( 'cleora-style', get_stylesheet_uri(), array(), CLEORA_VERSION );
 	wp_enqueue_style( 'cleora-tailwind', CLEORA_BLOG_URI.'assets/css/cleora.css', array(), CLEORA_VERSION );
 	
-	wp_enqueue_script( 'cleora-alpine', CLEORA_BLOG_URI.'assets/js/alpine.min.js', array(), '3.10.2');
+	wp_enqueue_script( 'cleora-alpine', CLEORA_BLOG_URI.'assets/js/alpine.min.js#deferload', array(), '3.10.2');
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -199,13 +208,17 @@ function cleora_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cleora_scripts' );
 
-
-add_filter( 'clean_url', function( $url ) {
-    if ( FALSE === strpos( $url, '.js' ) ) {
+function add_defer_forscript($url)
+{
+    if (strpos($url, '#deferload')===false)
         return $url;
-    }
-    return "$url' defer='defer";
-}, 11, 1 );
+    else if (is_admin())
+        return str_replace('#deferload', '', $url);
+    else
+        return str_replace('#deferload', '', $url)."' defer='defer"; 
+}
+add_filter('clean_url', 'add_defer_forscript', 11, 1);
+
 
 /**
  * Custom template tags for this theme.
@@ -223,6 +236,9 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 require get_template_directory() . '/inc/cleora-navwalker.php';
+
+require get_template_directory() . '/inc/block-styles.php';
+require get_template_directory() . '/inc/block-patterns.php';
 
 
 /**

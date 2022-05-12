@@ -4,7 +4,7 @@ Tags: three-column, custom-background, custom-colors, custom-logo, custom-menu, 
 Requires at least: 5.9
 Tested up to: 5.9
 Requires PHP: 5.6
-Stable tag: 1.2
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -63,11 +63,14 @@ https://kaboompics.com/photo/17779/backgrounds-of-coloured-drops
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.0 =
 * Released : May 05, 2022
 
-= 1.1 =
+= 1.1.0 =
 * Bug Fixes: May 05, 2022
 
-= 1.2 =
+= 1.2.0 =
 * Bug Fixes: May 06, 2022
+
+= 1.3.0 =
+* Bug Fixes: May 12, 2022
