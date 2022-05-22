@@ -106,19 +106,18 @@ if ( ! function_exists( 'cleora_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		$logo_width  = 150;
-		$logo_height = 40;
+		$cleora_logo_width  = 150;
+		$cleora_logo_height = 40;
 
-		$args = array(
-				'height'               => $logo_height,
-				'width'                => $logo_width,
+		$cleora_custom_logo_args = array(
+				'height'               => $cleora_logo_height,
+				'width'                => $cleora_logo_width,
 				'flex-width'           => true,
 				'flex-height'          => true,
 				'unlink-homepage-logo' => true,
 		);
 
-		add_theme_support('custom-logo', $args);
-
+		add_theme_support('custom-logo', $cleora_custom_logo_args);
 
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
@@ -172,8 +171,6 @@ function cleora_widgets_init() {
 }
 add_action( 'widgets_init', 'cleora_widgets_init' );
 
-// add_filter( 'use_widgets_block_editor', '__return_false' );
-
 /**
  * Register custom fonts.
  */
@@ -208,7 +205,7 @@ function cleora_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'cleora_scripts' );
 
-function add_defer_forscript($url)
+function cleora_add_defer_forscript($url)
 {
     if (strpos($url, '#deferload')===false)
         return $url;
@@ -217,7 +214,7 @@ function add_defer_forscript($url)
     else
         return str_replace('#deferload', '', $url)."' defer='defer"; 
 }
-add_filter('clean_url', 'add_defer_forscript', 11, 1);
+add_filter('clean_url', 'cleora_add_defer_forscript', 11, 1);
 
 
 /**
@@ -250,7 +247,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 
 function cleora_excerpt_length( $length ) {
-    return 15;
+		if ( is_admin() ) { return $length; }
+		else{ return 15; }
 }
 add_filter( 'excerpt_length', 'cleora_excerpt_length', 999 );
 
@@ -263,35 +261,11 @@ function cleora_excerpt ($post_excerpt) {
 add_filter ('get_the_excerpt','cleora_excerpt');
 
 function cleora_excerpt_more( $more ) {
-    return '';
+  if ( is_admin() ) { return $more; }
+	else{ return ''; }
+	
 }
 add_filter('excerpt_more', 'cleora_excerpt_more');
-
-
-
-function cleora_get_post_view() {
-    $count = get_post_meta( get_the_ID(), 'post_views_count', true );
-		$count = ($count > 0) ? $count : 0;
-    return "$count";
-}
-function cleora_set_post_view() {
-    $key = 'post_views_count';
-    $post_id = get_the_ID();
-    $count = (int) get_post_meta( $post_id, $key, true );
-    $count++;
-    update_post_meta( $post_id, $key, $count );
-}
-function cleora_posts_column_views( $columns ) {
-    $columns['post_views'] = 'Views';
-    return $columns;
-}
-function cleora_posts_custom_column_views( $column ) {
-    if ( $column === 'post_views') {
-        echo cleora_get_post_view();
-    }
-}
-add_filter( 'manage_posts_columns', 'cleora_posts_column_views' );
-add_action( 'manage_posts_custom_column', 'cleora_posts_custom_column_views' );
 
 
 add_filter(
@@ -302,7 +276,7 @@ add_filter(
 );
 
 
-function pagination_bar( $query_wp ) 
+function cleora_pagination_bar( $query_wp ) 
 {
     $pages = $query_wp->max_num_pages;
     $big = 999999999; // need an unlikely integer

@@ -30,7 +30,7 @@ function cleora_customize_register( $wp_customize ) {
         'priority' => 30
     ));
     $wp_customize->add_setting( 'cleora_header_facebook' , array(
-		'sanitize_callback' => 'sanitize_url',
+		'sanitize_callback' => 'esc_url_raw',
 		'transport'   => 'refresh',
     ));
     $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cleora_header_facebook', array(
@@ -41,7 +41,7 @@ function cleora_customize_register( $wp_customize ) {
 	)));
 
 	$wp_customize->add_setting( 'cleora_header_twitter' , array(
-        'sanitize_callback' => 'sanitize_url'
+        'sanitize_callback' => 'esc_url_raw'
     ));
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cleora_header_twitter', array(
 		'label'    => __( 'Twitter Link', 'cleora' ),
@@ -50,7 +50,7 @@ function cleora_customize_register( $wp_customize ) {
 		'type'     => 'text'
 	)));
 	$wp_customize->add_setting( 'cleora_header_linked' , array(
-    	'sanitize_callback' => 'sanitize_url'
+    	'sanitize_callback' => 'esc_url_raw'
     ));
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cleora_header_linked', array(
 		'label'    => __( 'Linkedin Link', 'cleora' ),
@@ -59,7 +59,7 @@ function cleora_customize_register( $wp_customize ) {
 		'type'     => 'text'
 	)));
 	$wp_customize->add_setting( 'cleora_header_instagram' , array(
-    	'sanitize_callback' => 'sanitize_url'
+    	'sanitize_callback' => 'esc_url_raw'
     ));
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cleora_header_instagram', array(
 		'label'    => __( 'Instagram Link', 'cleora' ),
@@ -68,7 +68,7 @@ function cleora_customize_register( $wp_customize ) {
 		'type'     => 'text'
 	)));
 	$wp_customize->add_setting( 'cleora_header_youtube' , array(
-    	'sanitize_callback' => 'sanitize_url'
+    	'sanitize_callback' => 'esc_url_raw'
     ));
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'cleora_header_youtube', array(
 		'label'    => __( 'Youtube Link', 'cleora' ),
@@ -106,7 +106,6 @@ function cleora_change_link_color()
     print '
     <style>
 	a,
-	a:hover,
 	.post-grids .post-grid .post-footer a.float-end svg, 
 	.sidebar .sidebar-widget h2, 
 	.sidebar .sidebar-widget h4, 
@@ -116,6 +115,9 @@ function cleora_change_link_color()
 	header .social-icons-profile a svg:hover{
         color:'.esc_html($header_color).';
     }
+	[type="submit"]{
+		background-color:'.esc_html($header_color).';
+	}
     </style>';
 
 }

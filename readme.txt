@@ -4,7 +4,7 @@ Tags: three-column, custom-background, custom-colors, custom-logo, custom-menu, 
 Requires at least: 5.9
 Tested up to: 5.9
 Requires PHP: 5.6
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -51,15 +51,20 @@ Cleora blogging theme is also based on:
 Underscores https://underscores.me/, Copyright (C) 2012-2022 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-* screenshot.png © 2019 Kaboompics.com, CC0, 
-https://kaboompics.com/photo/14021/girl-with-a-gift
-https://kaboompics.com/photo/21889/young-asian-woman-at-office
-https://kaboompics.com/photo/4903/stylish-workspace-with-macbook-pro
-https://kaboompics.com/photo/21636/paint-backgrounds-various-shades-of-purple-and-pink
-https://kaboompics.com/photo/7949/fresh-garden-rose-on-the-blue-water-of-a-swimming-pool-on-a-warm-summer-day
-https://kaboompics.com/photo/17779/backgrounds-of-coloured-drops
+* screenshot.png © 2022 Stocksnap.io, CC0, 
+Photo by Travel Photographer https://stocksnap.io/photo/isolated-flower-RJ2EGPBNGB
+Photo by JJ Skys the Limit https://stocksnap.io/photo/ocean-water-O8Q15LXFW6
+Photo by Kristin Hardwick https://stocksnap.io/photo/woman-business-GYS5RYVTKI
+Photo by Nature's Beauty https://stocksnap.io/photo/pink-garden-JZSIAOJTVJ
+Photo by LinkedIn Sales Navigator https://stocksnap.io/photo/business-woman-CZSB4NOMYB
+Photo by Bernard Spragg https://stocksnap.io/photo/mushroom-fungus-OD3MLWCFIY
 
-* © 2022 Tailwind Labs Inc. https://tailwindcss.com
+* cleora.css © 2022 Tailwind Labs, Inc, MIT
+https://tailwindcss.com
+
+* alpine.min.js © 2019-2021 Caleb Porzio and contributors, MIT
+https://alpinejs.dev/
+
 
 == Changelog ==
 
@@ -74,3 +79,6 @@ https://kaboompics.com/photo/17779/backgrounds-of-coloured-drops
 
 = 1.3.0 =
 * Bug Fixes: May 12, 2022
+
+= 1.3.1 =
+* Bug Fixes: May 20, 2022

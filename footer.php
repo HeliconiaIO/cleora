@@ -28,13 +28,21 @@
 				</div>
 		</div>
 		<p class="text-center text-gray-700 my-1">
-			<small>Copyright &copy; <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>. All Rights Reserved.</small>
+			<small>
+			<?php
+				printf(
+					/* translators: %s: WordPress. */
+					esc_html__( 'Copyright &copy; %s. All Rights Reserved.', 'cleora' ), 
+					'<a href="' . esc_url( home_url( '/' ) ) . '"rel="home">'.get_bloginfo( 'name' ).'</a>'
+				);
+			?>
+			</small>
 		</p>
 		<p class="text-center text-gray-500 text-sm">
 				<?php
 					printf(
 						/* translators: %s: WordPress. */
-						esc_html__( 'Made with ❤️ by developer of  %s.', 'cleora' ),
+						esc_html__( 'Made with ❤️ by developer of %s.', 'cleora' ),
 						'<a href="' . esc_url( __( 'https://www.fancytextpro.com/', 'cleora' ) ) . '">Fancy Text Pro</a>'
 					);
 				?>

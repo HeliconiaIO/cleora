@@ -44,7 +44,6 @@ get_header();
 
 						endwhile; // End of the loop.
 					?>
-					<?php cleora_set_post_view(); ?>
 			</div>
 			<div id="sidebar">
 					<?php get_sidebar(); ?>

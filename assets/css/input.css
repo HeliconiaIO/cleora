@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body{
+    @apply text-xl;
+  }
+  h1 {
+    @apply text-5xl font-semibold my-2;
+  }
+  h2 {
+    @apply text-4xl font-semibold my-2;
+  }
+  h3 {
+    @apply text-3xl font-semibold my-2;
+  }
+  h4 {
+    @apply text-2xl font-semibold my-2;
+  }
+  h5 {
+    @apply text-xl font-semibold my-2;
+  }
+  h6 {
+    @apply text-lg font-semibold my-2;
+  }
+  p{
+    @apply leading-relaxed text-lg mb-5;
+  }
+  ul, ol, dl{
+    @apply list-inside text-base;
+  }
+  ul li{
+    @apply list-disc pl-5 py-1;
+  }
+  ol li{
+    @apply list-decimal pl-5 py-1;
+  }
+  dl dt{
+    @apply py-1;
+  }
+  dl dd{
+    @apply pl-5 py-1;
+  }
+  hr{
+    @apply border border-gray-200 my-5;
+  }
+  table{
+    @apply table-auto text-base my-5 rounded;
+  }
+  table tr th{
+    @apply border bg-gray-200 border-gray-200 px-4 py-2 font-bold rounded;
+  }
+  table tr td{
+    @apply border border-gray-200 px-4 py-2 rounded;
+  }
+  label{
+    @apply text-base text-gray-600 font-semibold;
+  }
+  legend {
+    display: block;
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+  }
+  [type='text'], [type='email'], [type='url'], [type='password'], [type='number'], [type='date'], [type='datetime-local'], [type='month'], [type='search'], [type='tel'], [type='time'], [type='week'], [multiple], input{
+    @apply focus:ring-blue-300 focus:border-blue-300 p-2 border-2 rounded border-gray-300;
+    outline-offset: 0px;
+  }
+  [type='submit']{
+    @apply inline-block w-auto px-4 py-1 border-0 rounded cursor-pointer font-semibold text-white;
+  }
+  [type='reset']{
+    @apply inline-block w-auto px-4 py-1 border-0 rounded cursor-pointer font-semibold text-white bg-gray-400 hover:bg-gray-500;
+  }
+  select{
+    @apply mt-1 block py-2 px-3 border-2 border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm;
+  }
+  textarea{
+    @apply shadow-sm focus:ring-blue-500 focus:border-blue-500 mt-1 block w-full sm:text-sm border-2 border-gray-300 rounded-md h-48;
+  }
+  pre{
+    @apply whitespace-pre-line py-3 text-base;
+  }
+  .wp-block-quote {
+    @apply py-2 pl-10 text-lg relative;
+  }
+
+  .wp-block-quote:before {
+    @apply text-7xl mx-3 left-0 top-2 absolute;
+    content: "\275D";
+  }
+
+  .wp-block-quote p {
+    @apply mt-1 mb-0 ml-10 block;
+  }
+
+  .wp-block-quote cite {
+    @apply mt-1 mb-0 ml-10 block text-sm italic;
+  }
+
+  .sidebar section.widget_block h2{
+    @apply my-0 px-3 py-2 text-gray-700 font-bold border-b-2 text-lg rounded-t-lg;
+  }
+  .sidebar .wp-block-search{
+    @apply p-4;
+  }
+  .sidebar .wp-block-search label{
+    @apply hidden;
+  }
+  .sidebar section.widget_block ul,
+  .sidebar section.widget_block ol {
+    @apply py-2;
+  }
+
+  .sidebar section.widget_block ul li,
+  .sidebar section.widget_block ol li {
+    @apply mb-0 px-3 py-2 list-none cursor-pointer hover:bg-gray-100;
+  }
+
+}
+
+@layer utilities {
+  /* .entry-footer{
+    @apply flex justify-between;
+  } */
+
+  /* .entry-content>p:first-child { 
+    @apply first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-white first-letter:mr-3 first-letter:float-left;
+  } */
+
+  .navbar-brand{
+    @apply text-2xl font-bold;
+  }
+  .navbar-brand img,
+  .custom-logo-link img{
+    max-width: 150px;
+    height: auto;
+  }
+  .page-title{
+    @apply font-bold text-gray-600 my-0 pb-4 text-3xl;
+  }
+  .page-header{
+    @apply mb-2;
+  }
+
+  .entry-content fieldset {
+    @apply border border-gray-100 p-2;
+    margin: 0 2px 20px 2px;
+  }
+
+  .widget_block a,
+  .comments-area a,
+  .entry-content a {
+    @apply hover:underline;
+  }
+
+  .search-submit{
+    padding: 0.45rem 0.45rem;
+  }
+
+  .pagination{
+    @apply flex justify-center md:justify-end w-full;
+  }
+  .pagination .nav-links span.current{
+    @apply px-3 py-1 bg-gray-400 text-white mx-2 rounded text-sm;
+  }
+  .pagination .nav-links a{
+    @apply px-3 py-1 border border-gray-500 mx-2 rounded text-sm hover:bg-gray-100;
+  }
+  .nav-links{
+    @apply flex flex-wrap;
+  }
+  .nav-next,
+  .nav-previous{
+    @apply sm:w-1/2 w-full;
+  }
+  .nav-next a{
+    @apply flex justify-end px-1 py-2 items-center;
+  }
+  .nav-previous a{
+    @apply flex justify-start px-1 py-2 items-center;
+  }
+  .cats-links, .tags-links{
+    @apply flex flex-wrap content-center text-sm font-semibold items-center py-2;
+  }
+  .cats-links a{
+    @apply m-0.5 px-1 py-0.5 text-sm border border-gray-600 rounded hover:bg-gray-600 hover:text-white;
+  }
+  .tags-links a{
+    @apply p-1 text-sm;
+  }
+  .post-edit-link{
+    @apply mb-0 py-0;
+  }
+  .edit-post{
+    @apply text-sm;
+  }
+  .comment-list li{
+    @apply list-none pl-0;
+  }
+  .comment-reply-title{
+    @apply text-gray-500;
+  }
+  
+  .footer-menu{
+    @apply flex items-center align-middle;
+  }
+  .footer-menu li{
+    @apply list-none pl-0 mx-3;
+  }
+
+
+  figcaption,
+  .wp-caption-text {
+    color: #6d6d6d;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 1.5rem;
+  }
+
+  figcaption a,
+  .wp-caption-text a {
+    color: inherit;
+  }
+
+  .gallery-caption {
+    display: block;
+    margin-top: 0.8em;
+  }
+
+  .bypostauthor .comment-footer-meta .by-post-author {
+    display: block;
+  }
+
+  .alignleft {
+		/*rtl:ignore*/
+		margin: 0.3rem 2rem 2rem 0;
+	}
+
+	.alignright {
+		/*rtl:ignore*/
+		margin: 0.3rem 0 2rem 2rem;
+	}
+
+  .alignnone,
+  .aligncenter {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+
+  .screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  }
+
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    right: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+  }
+
+}
+
