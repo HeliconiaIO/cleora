@@ -28,10 +28,10 @@ if( !function_exists('cleora_comments_lists') ){
 						<div class="text-gray-500 text-xs"><?php printf(/* translators: 1: date and time(s). */ esc_html__('%1$s at %2$s' , 'cleora'), esc_attr(get_comment_date()),  esc_attr(get_comment_time())) ?></div>
 					</div>
 				</div>
-				<p class="text-gray-800 text-sm mt-2 leading-normal md:leading-relaxed">
+				<p class="text-gray-800 text-sm mt-2 leading-normal md:leading-relaxed comments-content">
 					<?php echo get_comment_text(); ?>
 				</p>
-				<div class="text-gray-500 text-xs flex items-center mt-3">
+				<div class="text-gray-500 text-xs flex items-center mt-3 comment-reply">
 					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 				</div>
 			</div>

@@ -24,9 +24,9 @@ class Cleora_Nav_Walker extends Walker_Nav_Menu {
   function start_el(&$output, $item, $depth=0, $args=[], $id=0) {
     if ($args->walker->has_children) {
 			$output .= '<div @click.away="open = false" class="relative" x-data="{ open: false }" tabindex="-1">
-      <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 text-sm font-bold text-left bg-transparent rounded md:w-auto md:inline hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:outline-none focus:shadow-outline" tabindex="-1">
-      <span><a href="'.$item->url.'" class="">'.$item->title.'</a></span>
-      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'."'".'rotate-180'."'".': open, '."'".'rotate-0'."'".': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      <button @click="open = !open"  class="flex flex-row items-center w-full py-2 text-sm font-bold text-left bg-transparent rounded md:w-auto md:inline hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:outline-none focus:shadow-outline" tabindex="-1">
+      <a href="'.$item->url.'" class="py-2 px-4">'.$item->title.'
+      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'."'".'rotate-180'."'".': open, '."'".'rotate-0'."'".': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>
       </button>';
 		}
     else{

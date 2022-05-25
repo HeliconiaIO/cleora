@@ -24,20 +24,18 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<header class="relative">
-		<a class="skip-link screen-reader-text" href="#primary" tabindex="-1"><?php esc_html_e( 'Skip to content', 'cleora' ); ?></a>
 		<div class="max-w-7xl mx-auto px-4 sm:px-6">
+			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to the content', 'cleora' ); ?></a>
 			<div x-data="{ open: false }" class="flex flex-col md:items-center md:justify-between md:flex-row border-b-2 border-gray-200">
-				<div class="py-2 flex flex-row items-center justify-between">
-					<div class="text-2xl font-semibold text-gray-600	focus:outline-none focus:shadow-outline">
-						<?php
-						if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) { ?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" rel="home"><?php the_custom_logo(); ?></a>
-						<?php }else{ ?>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" rel="home"><?php bloginfo( 'name' ); ?></a>
-						<?php }
-						?>
-					</div>
-					<button class="md:hidden rounded-lg" @click="open = !open" aria-label="<?php esc_attr_e("Open"); ?>">
+				<div class="py-2 flex flex-row items-center justify-between text-2xl font-semibold text-gray-600">
+					<?php
+					if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) { ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" rel="home"><?php the_custom_logo(); ?></a>
+					<?php }else{ ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" rel="home"><?php bloginfo( 'name' ); ?></a>
+					<?php }
+					?>
+					<button class="md:hidden rounded-lg" @click="open = !open" aria-label="<?php esc_attr_e("Open", 'cleora'); ?>">
 						<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
 							<path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
 							<path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
