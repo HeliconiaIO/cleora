@@ -105,19 +105,13 @@ function cleora_change_link_color()
 	
     print '
     <style>
-	a,
-	.post-grids .post-grid .post-footer a.float-end svg, 
-	.sidebar .sidebar-widget h2, 
-	.sidebar .sidebar-widget h4, 
-	.sidebar .sidebar-widget h5, 
-	.sidebar .sidebar-widget h6, 
-	.sidebar .sidebar-widget h3, 
-	header .social-icons-profile a svg:hover{
-        color:'.esc_html($header_color).';
+		a
+		{
+      color:'.esc_html($header_color).';
     }
-	[type="submit"]{
-		background-color:'.esc_html($header_color).';
-	}
+		[type="submit"]{
+			background-color:'.esc_html($header_color).';
+		}
     </style>';
 
 }

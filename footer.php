@@ -21,12 +21,12 @@
 								'depth'             => 1,
 								'container'         => false,
 								'menu_class'        => 'footer-menu',
-								'walker'            => new Cleora_Nav_Walker(),
 							));
 						}
 						?>
 				</div>
 		</div>
+		<div class="copyright">
 		<p class="text-center text-gray-700 my-1">
 			<small>
 			<?php
@@ -47,6 +47,7 @@
 					);
 				?>
 		</p>
+		</div>
 	</footer>
 	<!-- #footer -->
 	<?php wp_footer(); ?>

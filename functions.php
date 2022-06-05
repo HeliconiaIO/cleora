@@ -232,8 +232,6 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
-require get_template_directory() . '/inc/cleora-navwalker.php';
-
 require get_template_directory() . '/inc/block-styles.php';
 require get_template_directory() . '/inc/block-patterns.php';
 

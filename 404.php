@@ -21,9 +21,9 @@ get_header();
 				<div class="flex justify-center py-5">
 					<?php get_search_form(); ?>
 				</div>
-				<p>or</p>
+				<p><?php print esc_html('or', 'cleora'); ?></p>
 				<div class="flex justify-center">
-					<a href="/" class="inline-flex bg-gray-600 text-white rounded hover:text-white hover:bg-gray-700 px-4 py-2">Go Home</a>
+					<a href="/" class="inline-flex bg-gray-600 text-white rounded hover:text-white hover:bg-gray-700 px-4 py-2"><?php print esc_html('Go Home', 'cleora'); ?></a>
 				</div>
 			</div>
 		</div>

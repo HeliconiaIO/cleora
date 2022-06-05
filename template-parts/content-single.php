@@ -12,9 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('text-gray-700'); ?>>
 	<?php if( has_post_thumbnail() ) : ?>
 	<div class="entry-feature-image pb-3">
-		<a href="<?php print esc_url(get_the_permalink( get_the_ID() )); ?>">
-			<?php the_post_thumbnail("cleora-medium", array('class' => 'rounded-xl transition duration-300 hover:shadow-xl')); ?>
-		</a>
+		<?php the_post_thumbnail("cleora-medium", array('class' => 'rounded-xl transition duration-300 hover:shadow-xl')); ?>
 	</div>
 	<?php endif; ?>
 	<header class="entry-header border-b py-2">

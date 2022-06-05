@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Cleora 1.3.3\n"
+"Project-Id-Version: Cleora 1.3.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/cleora\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-05-25T12:16:21+00:00\n"
+"POT-Creation-Date: 2022-06-05T11:04:57+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "X-Domain: cleora\n"
@@ -60,16 +60,16 @@ msgid "Send"
 msgstr ""
 
 #. translators: %s: WordPress.
-#: footer.php:35
+#: footer.php:36
 msgid "Copyright &copy; %s. All Rights Reserved."
 msgstr ""
 
 #. translators: %s: WordPress.
-#: footer.php:45
+#: footer.php:46
 msgid "Made with ❤️ by developer of %s."
 msgstr ""
 
-#: footer.php:46
+#: footer.php:47
 msgid "https://www.fancytextpro.com/"
 msgstr ""
 
@@ -93,7 +93,7 @@ msgstr ""
 msgid "Skip to the content"
 msgstr ""
 
-#: header.php:39
+#: header.php:42
 msgid "Open"
 msgstr ""
 
@@ -142,35 +142,33 @@ msgid "Youtube Link"
 msgstr ""
 
 #: inc/template-tags.php:20
-#: inc/template-tags.php:45
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
 #. translators: 1: date and time(s).
 #: inc/template-tags.php:28
-#: inc/template-tags.php:54
 msgid "%1$s at %2$s"
 msgstr ""
 
 #. translators: %s: post date.
-#: inc/template-tags.php:83
+#: inc/template-tags.php:63
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
 #. translators: %s: post author.
-#: inc/template-tags.php:99
+#: inc/template-tags.php:79
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: %s: post title
-#: inc/template-tags.php:143
+#: inc/template-tags.php:123
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:164
+#: inc/template-tags.php:144
 msgid "<span class=\"edit-post\">Edit</span> <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
@@ -210,22 +208,22 @@ msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
 #: template-parts/content-page.php:62
-#: template-parts/content-single.php:60
+#: template-parts/content-single.php:58
 msgid "Pages:"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-single.php:47
+#: template-parts/content-single.php:45
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #. translators: %s: Author name.
-#: template-parts/content-single.php:82
+#: template-parts/content-single.php:80
 msgid "By %s"
 msgstr ""
 
 #. translators: %s: Author name.
-#: template-parts/content-single.php:94
+#: template-parts/content-single.php:92
 msgid "View all of %s's posts."
 msgstr ""
 
