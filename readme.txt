@@ -97,3 +97,7 @@ https://alpinejs.dev/
 = 1.3.5 =
 * Bug Fixes: June 10, 2022
 - Fixed the css issue with the widgets and header
+
+= 1.3.6 =
+* Bug Fixes: June 10, 2022
+- css version update

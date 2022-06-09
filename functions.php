@@ -9,7 +9,7 @@
 
 if ( ! defined( 'CLEORA_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'CLEORA_VERSION', '1.2' );
+	define( 'CLEORA_VERSION', '1.3.6' );
 }
 define('CLEORA_BLOG_DIR', get_template_directory().'/');
 define('CLEORA_BLOG_URI', get_template_directory_uri().'/');
