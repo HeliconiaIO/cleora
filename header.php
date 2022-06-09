@@ -27,7 +27,7 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-6">
 			<div x-data="{ open: false }" class="flex py-2 md:py-0 flex-col md:items-center md:justify-between md:flex-row border-b-2 border-gray-200">
 				<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to the content', 'cleora' ); ?></a>
-				<div class="flex flex-row items-center justify-between text-2xl font-semibold">
+				<div class="flex flex-row items-center justify-between text-2xl font-semibold py-2">
 					<?php
 					if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) { ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="navbar-brand" rel="home">
