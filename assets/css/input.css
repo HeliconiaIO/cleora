@@ -102,11 +102,9 @@
     @apply mt-1 mb-0 ml-10 block text-sm italic;
   }
 
-  .sidebar section.widget_block p,
-  .sidebar section.widget_block h2,
-  .sidebar section.widget_meta h3,
-  .sidebar section.widget_categories h3{
-    @apply my-0 px-3 py-2 text-gray-700 font-bold border-b-2 text-lg rounded-t-lg;
+  .sidebar section h2,
+  .sidebar section h3{
+    @apply my-0 px-3 py-2 font-bold border-b-2 text-lg rounded-t-lg;
   }
   .sidebar .wp-block-search{
     @apply p-4;
@@ -114,23 +112,17 @@
   .sidebar .wp-block-search label{
     @apply hidden;
   }
-  .sidebar section.widget_block ul,
-  .sidebar section.widget_meta ul,
-  .sidebar section.widget_categories ul,
-  .sidebar section.widget_block ol {
+  .sidebar section ul,
+  .sidebar section ol {
     @apply py-2;
   }
 
-  .sidebar section.widget_block ul li,
-  .sidebar section.widget_block ol li,
-  .sidebar section.widget_meta ul li,
-  .sidebar section.widget_categories ul li {
+  .sidebar section ul li,
+  .sidebar section ol li{
     @apply mb-0 px-3 py-2 list-none cursor-pointer hover:bg-gray-100 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600;
   }
 
-  .sidebar section.widget_block a,
-  .sidebar section.widget_meta a,
-  .sidebar section.widget_categories a{
+  .sidebar section a{
     @apply rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600;
   }
 

@@ -9,7 +9,7 @@
 
 if ( ! defined( 'CLEORA_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
-	define( 'CLEORA_VERSION', '1.3.6' );
+	define( 'CLEORA_VERSION', '1.4.0' );
 }
 define('CLEORA_BLOG_DIR', get_template_directory().'/');
 define('CLEORA_BLOG_URI', get_template_directory_uri().'/');
@@ -162,7 +162,7 @@ function cleora_widgets_init() {
 			'name'          => esc_html__( 'Sidebar', 'cleora' ),
 			'id'            => 'sidebar-1',
 			'description'   => esc_html__( 'Add widgets here.', 'cleora' ),
-			'before_widget' => '<section id="%1$s" class="border bg-white rounded-lg shadow-xl mb-4 %2$s">',
+			'before_widget' => '<section id="%1$s" class="border rounded-lg shadow-xl mb-4 %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
@@ -178,7 +178,7 @@ function cleora_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
 
-	$fonts[] = 'Nunito:400';
+	$fonts[] = 'Nunito:500';
  
 	if ( $fonts ) {
 		$fonts_url = add_query_arg( array(
@@ -252,7 +252,7 @@ add_filter( 'excerpt_length', 'cleora_excerpt_length', 999 );
 
 
 function cleora_excerpt ($post_excerpt) { 
-  $post_excerpt = '<p class="leading-relaxed my-2 text-sm text-gray-700">' . $post_excerpt . '</p>';
+  $post_excerpt = '<p class="leading-relaxed my-2 text-sm text-gray-500">' . $post_excerpt . '</p>';
   return $post_excerpt;
   }
 

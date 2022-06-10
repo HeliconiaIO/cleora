@@ -4,7 +4,7 @@ Tags: three-column, custom-background, custom-colors, custom-logo, custom-menu, 
 Requires at least: 5.9
 Tested up to: 5.9
 Requires PHP: 5.6
-Stable tag: 1.3.5
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -101,3 +101,7 @@ https://alpinejs.dev/
 = 1.3.6 =
 * Bug Fixes: June 10, 2022
 - css version update
+
+= 1.4.0 =
+* Improved theme layout and customizer
+- optimize the theme and fixed the visual issues

@@ -14,6 +14,16 @@ function cleora_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
+	$wp_customize->add_setting('cleora_widget_header_color', array(
+        'default'           => '#2d53fe',
+		'sanitize_callback' => 'sanitize_hex_color',
+		'transport'   => 'refresh',
+    ));
+		$wp_customize->add_control( new WP_Customize_Color_Control($wp_customize, 'cleora_widget_header_color', array(
+        'label'    => __('Widget Header Color', 'cleora'),
+        'section'  => 'colors',
+    )));
+
 	$wp_customize->add_setting('cleora_link_color', array(
         'default'           => '#2d53fe',
 		'sanitize_callback' => 'sanitize_hex_color',
@@ -23,8 +33,7 @@ function cleora_customize_register( $wp_customize ) {
         'label'    => __('Link Color', 'cleora'),
         'section'  => 'colors',
     )));
-	
-	
+
 	$wp_customize->add_section( 'cleora_header_section' , array(
         'title'    => __( 'Header', 'cleora' ),
         'priority' => 30
@@ -102,17 +111,23 @@ add_action( 'customize_register', 'cleora_customize_register' );
 function cleora_change_link_color()
 {
     $header_color = get_theme_mod('cleora_link_color', '#2d53fe');
+		$widget_header_color = get_theme_mod('cleora_widget_header_color', '#2d53fe');
+		$background_color = get_background_color();
 	
     print '
-    <style>
-		a
-		{
-      color:'.esc_html($header_color).';
-    }
-		[type="submit"]{
-			background-color:'.esc_html($header_color).';
-		}
-    </style>';
+<style>
+a{
+	color:'.esc_html($header_color).';
+}
+.sidebar section h2, .sidebar section h3{
+	background-color:'.esc_html($widget_header_color).';
+	color:#'.esc_html($background_color).';
+}
+[type="submit"]{
+	background-color:'.esc_html($header_color).';
+	color:#'.esc_html($background_color).';
+}
+</style>';
 
 }
 

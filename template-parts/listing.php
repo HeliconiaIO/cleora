@@ -9,17 +9,17 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('flow-hidden group'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('flow-hidden group border rounded-lg shadow-xl hover:shadow transition duration-150'); ?>>
 	<?php if( has_post_thumbnail() ) : ?>
 	<a href="<?php print esc_url( get_the_permalink() ); ?>">
-		<?php the_post_thumbnail("cleora-thumb", ['class' => 'lg:h-48 md:h-36 w-full object-cover object-center rounded-lg shadow-sm transition duration-300 group-hover:shadow-xl', 'title' => 'Feature image']); ?>
+		<?php the_post_thumbnail("cleora-thumb", ['class' => 'lg:h-48 md:h-36 w-full object-cover object-center rounded-t-lg shadow-sm transition duration-300 group-hover:shadow-xl group-hover:-translate-y-2', 'title' => 'Feature image']); ?>
 	</a>
 	<?php endif; ?>
-	<div class="py-4">
+	<div class="p-4">
 		<p class="text-xs title-font font-medium text-gray-400 my-0">
 			<?php the_category(" | "); ?>
 		</p>
-		<?php the_title( '<h2 class="title-font text-xl font-semibold mb-3"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+		<?php the_title( '<h2 class="title-font text-xl font-bold mb-3"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 		<?php the_excerpt(); ?>
 		<div class="flex items-center flex-wrap justify-between">
 			<div class="text-gray-400 inline-flex items-center text-sm">
